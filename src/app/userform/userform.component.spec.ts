@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SocialoutComponent } from './socialout.component';
+import { UserformComponent } from './userform.component';
 
-describe('SocialoutComponent', () => {
-  let component: SocialoutComponent;
-  let fixture: ComponentFixture<SocialoutComponent>;
+describe('UserformComponent', () => {
+  let component: UserformComponent;
+  let fixture: ComponentFixture<UserformComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SocialoutComponent ]
+      declarations: [ UserformComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SocialoutComponent);
+    fixture = TestBed.createComponent(UserformComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

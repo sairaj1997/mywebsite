@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,9 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-import { SocialoutComponent } from './socialout/socialout.component';
+
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { UserformComponent } from './userform/userform.component';
+
 
 
 
@@ -24,15 +27,18 @@ import { RegisterComponent } from './register/register.component';
     AboutusComponent,
     CategoriesComponent,
     FeedbackComponent,
-    SocialoutComponent,
+    
     LoginComponent,
     RegisterComponent,
+    UserformComponent,
+   
   
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
