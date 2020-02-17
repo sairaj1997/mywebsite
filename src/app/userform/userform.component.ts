@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{User} from '../user'
+import { User } from '../user'
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-userform',
@@ -7,13 +8,22 @@ import{User} from '../user'
   styleUrls: ['./userform.component.css']
 })
 export class UserformComponent implements OnInit {
-  zodiac=['cancer','leo','capricon','aries'];
-model=new User('sairaj','e.sairaj17@gmail.com','sairaj1997',this.zodiac[0]);
-get diagnostic(){return JSON.stringify(this.model);}
-  constructor() { }
+  zodiac = ['cancer', 'leo', 'capricon', 'aries'];
+  // model = new User('sairaj', 'e.sairaj17@gmail.com', 'sairaj1997', this.zodiac[0]);
+  model = {
+    'username': '',
+    'password': ''
+  }
+  get diagnostic() { return JSON.stringify(this.model); }
+  constructor(private data:DataService) { }
 
   ngOnInit() {
-    
+
+  }
+  onsubmit(){
+    this.data.login(this.model).subscribe(res=>{
+      alert(JSON.stringify(res));
+    });
   }
 
 }
