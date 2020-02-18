@@ -8,9 +8,11 @@ import { DataService } from '../data.service';
 })
 export class FeedbackComponent implements OnInit {
   model = {
-    "name": "sai",
-    "comments": "xyz"
-  }
+    "email": "sai",
+    "rating": 2,
+    "complaints":"",
+    "comments":""
+   }
   //get diagnostic() { return JSON.stringify(this.model); }
   constructor(private data: DataService) { }
 

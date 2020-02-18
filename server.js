@@ -77,8 +77,11 @@ var User = mongoose.model("User", userSchema);
 // })
 
 var feedbackSchema = new Schema({
-    name: String,
-    comments: String
+    "email":String,
+    "rating":Number,
+    "complaints":String,
+    "comments":String
+
 });
 
 var Feedback = mongoose.model("Feedback", feedbackSchema);

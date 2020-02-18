@@ -18,5 +18,8 @@ export class DataService {
   submitfeedback(data){
     return this.http.post('http://localhost:3000/feedbacks',data);
   }
+  showfeedback(){
+    return this.http.get('http://localhost:3000/feedbacks');
+  }
 }
 

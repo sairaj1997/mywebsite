@@ -15,6 +15,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserformComponent } from './userform/userform.component';
+import { ShowfeedbackComponent } from './showfeedback/showfeedback.component';
 
 
 
@@ -32,6 +33,7 @@ import { UserformComponent } from './userform/userform.component';
     LoginComponent,
     RegisterComponent,
     UserformComponent,
+    ShowfeedbackComponent,
 
 
 
