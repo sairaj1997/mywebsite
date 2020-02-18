@@ -15,5 +15,8 @@ export class DataService {
   register(usr){
     return this.http.post('http://localhost:3000/register', usr);
   }
+  submitfeedback(data){
+    return this.http.post('http://localhost:3000/feedbacks',data);
+  }
 }
 

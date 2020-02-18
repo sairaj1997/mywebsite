@@ -61,7 +61,7 @@ var userSchema = new Schema({
 
     username: String,
     password: String,
-    emailid:String
+    emailid: String
 });
 
 
@@ -76,6 +76,12 @@ var User = mongoose.model("User", userSchema);
 //     console.log(doc);
 // })
 
+var feedbackSchema = new Schema({
+    name: String,
+    comments: String
+});
+
+var Feedback = mongoose.model("Feedback", feedbackSchema);
 
 
 
@@ -109,21 +115,35 @@ app.post('/login', (req, res) => {
 
 
 })
-app.get('/users',(req,res)=>{
-    User.find({},(err,docs)=>{
+app.get('/users', (req, res) => {
+    User.find({}, (err, docs) => {
         res.json(docs);
     })
 })
 //for register
-app.post('/register',(req,res)=>{
-    var newUser=new User(req.body);
-    newUser.save((err,doc)=>{
+app.post('/register', (req, res) => {
+    var newUser = new User(req.body);
+    newUser.save((err, doc) => {
         res.json(doc);
     })
 })
+app.post('/feedbacks', (req, res) => {
+    var newFeedback = new Feedback(req.body);
+    newFeedback.save((err, doc) => {
+        if (err) {
+            res.json({ 'message': err })
+        }
+        else{
+            res.json(doc)
+        }
+    })
+})
 
-
-
+app.get('/feedbacks',(req,res)=>{
+    Feedback.find({}, (err,docs) =>{
+        res.json(docs)
+    })
+})
 
 
 
