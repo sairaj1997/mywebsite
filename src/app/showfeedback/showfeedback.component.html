@@ -1,4 +1,11 @@
-<div *ngFor="let f of feedbacks">
-    {{f.email}}
-    {{f.rating}}
+<div class="container">
+    <div class="col-sm-6">
+        <div *ngFor="let f of feedbacks" class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{f.email}}</h5>
+                <p class="card-text">{{f.comments}}</p>
+                <a routerLink="/feedback" class="btn btn-primary">Go back</a>
+            </div>
+        </div>
+    </div>
 </div>
